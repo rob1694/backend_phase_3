@@ -45,7 +45,7 @@ if req.path.match('/leagues/') && req.delete?
   id = req.path.split('/')[2]
     league = League.find(id)
     league.destroy
-    return [200, {'Content-Type' => 'application/json'}
+    return [200, {'Content-Type' => 'application/json'}]
 end
 
     # **** all heroes route****
@@ -91,7 +91,7 @@ if req.path.match('/hero/') && req.patch?
     id = req.path.split('/')[2]
       hero = Hero.find(id)
       hero.destroy
-      return [200, {'Content-Type' => 'application/json'}
+      return [200, {'Content-Type' => 'application/json'}]
   end
   
 
