@@ -41,6 +41,8 @@ if req.path == ('/leagues') && req.post?
   return [201, {'Content-Type' => 'application/json'}, [league.to_json]]
 end
 
+  # **** delete League ****
+  
 if req.path.match('/leagues/') && req.delete?
   id = req.path.split('/')[2]
     league = League.find(id)
